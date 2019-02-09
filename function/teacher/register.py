@@ -1,4 +1,2 @@
-print("请输入你的账号：")
-input(account)
-print("请输入你的密码：")
-input(password)
+number = input("请输入你的工号：")
+password = input("请输入你的密码：")
