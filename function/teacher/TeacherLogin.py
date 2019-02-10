@@ -1,3 +1,4 @@
+from function.teacher import TeacherFunctionChoose
 def TeacherLogin():
     while True:
         account  = input('请输入你的工号')
