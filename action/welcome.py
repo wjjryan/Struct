@@ -1,4 +1,5 @@
-from action import TeacherLogin,StudentLogin
+from function.student import StudentIndex
+from function.teacher import TeacherIndex
 
 print('作业管理系统')
 while True:
@@ -7,8 +8,8 @@ while True:
     print('2.学生')
     choose = input()
     if choose == '1':
-        TeacherLogin()
+        TeacherIndex.teacherLogin()
     elif choose == '2':
-        StudentLogin()
+        StudentIndex.studentLogin()
     else:
         print('输入错误请重新选择')
