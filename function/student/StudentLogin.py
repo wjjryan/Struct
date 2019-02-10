@@ -1,9 +1,8 @@
-def TeacherLogin():
+def studentLogin():
     while True:
-        account  = input('请输入你的工号')
+        account  = input('请输入你的学号')
         password = input('请输入你的密码')
         if account == '' and password == '':
-
             break
         else:
-            print('工号或密码错误请重新输入')
+            print('学号或密码错误请重新输入')

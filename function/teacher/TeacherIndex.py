@@ -6,8 +6,10 @@ def teacherLogin():
         choose = input()
         if choose == '1':
             TeacherRegister.teacherLogin()
+            break
         elif choose == '2':
             TeacherLogin.TeacherLogin()
+            break
         else:
-            print('输出错误请从新选择')
+            print('输出错误请重新选择')
             print('***********************')
