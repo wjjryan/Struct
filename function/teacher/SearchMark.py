@@ -11,8 +11,8 @@ def searchMark():
             AllMark()
         elif choose == '2':
             OnceMark()
-        elif choose == '2':
-
+        elif choose == '3':
+            NoMark()
         elif choose == '0':
             break
         else:
