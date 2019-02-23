@@ -1,3 +1,5 @@
+from Data import Data
+
 def inputAndCorrectMark():
     while True:
         print('请输入相应序号选择所需的功能')
@@ -11,7 +13,7 @@ def inputAndCorrectMark():
             CorrectMark()
         elif choose == '0':
             break
-    else:
+        else:
             print('输出错误请重新选择')
             print('***********************')
 
@@ -21,7 +23,20 @@ def InputMark():
     while True:
         student = input('请输入所需要录入成绩学生的学号')
         MarkNum = input('请输入所需要录入成绩作业的作业号')
+        Mark    = input('请输入成绩')
+        oncemark = [student, Mark]
+        for i in oncemark:
+            Data.addItem(MarkNum, i)
+        Data.addItem(MarkNum, '\n')
+        """此处调用排序算法"""
 
 def CorrectMark():
     student = input('请输入所需要修改成绩学生的学号')
     MarkNum = input('请输入所需要修改成绩作业的作业号')
+    Mark    = input('请输入成绩')
+    rs = Data.readFile(MarkNum)
+    rs[student+1][1] = Mark
+    Data.rewriteFile(MarkNum, ['学号', '成绩'])
+    for i in rs:
+        for j in i:
+            Data.addItem(MarkNum, j)

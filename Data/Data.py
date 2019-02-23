@@ -22,3 +22,14 @@ def addItem(filename,item):
     else:
         fileobject.write(item)
     fileobject.close()
+
+
+def rewriteFile(filename,item):
+    os.chdir('/Volumes/data/PycharmProject/Struct/Data')
+    fileobject = open(filename, 'w')
+    for i in item:
+        fileobject.write(i + ',')
+    fileobject.write('\n')
+    fileobject.close()
+
+

@@ -31,3 +31,7 @@ def PubulishHousework():
     date += 1
     Data.addItem('publishhousework', date)
     Data.addItem('publishhousework', content)
+    for i in 20:
+        Data.addItem(date, i)
+        Data.addItem(date, 0)
+        Data.addItem(date, '\n')
