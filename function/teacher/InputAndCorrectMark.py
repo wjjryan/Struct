@@ -3,14 +3,15 @@ def inputAndCorrectMark():
         print('请输入相应序号选择所需的功能')
         print('1.录入成绩')
         print('2.修改成绩')
+        print('0.返回')
         choose = input()
         if choose == '1':
             InputMark()
-            break
         elif choose == '2':
-
+            CorrectMark()
+        elif choose == '0':
             break
-        else:
+    else:
             print('输出错误请重新选择')
             print('***********************')
 

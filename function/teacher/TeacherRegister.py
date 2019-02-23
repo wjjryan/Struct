@@ -9,4 +9,5 @@ for i in teacherinformation:
     Data.addItem('TeacherInformation', i)
 Data.addItem('TeacherInformation', '\n')
 re = Data.readFile('TeacherInformation')
-print(re)
+for i in re:
+    print(i[1])
