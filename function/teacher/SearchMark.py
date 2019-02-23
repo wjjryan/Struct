@@ -21,6 +21,7 @@ def searchMark():
 
 
 def AllMark():
+    print('待完成')
 
 def OnceMark():
     MarkNum = input('请输出所需查询的作业号')
@@ -33,5 +34,5 @@ def NoMark():
     for i in rs:
         if i[1] == 0:
             print(i[2] + '\n')
-            
+
 
