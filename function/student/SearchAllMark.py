@@ -1,2 +1,5 @@
-def searchAllMark():
-    print('你的所有成绩')
+from Data import  Data
+
+def searchAllMark(num):
+    rs = Data.readFile(num)
+    print(rs)
