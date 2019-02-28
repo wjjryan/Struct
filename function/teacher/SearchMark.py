@@ -21,18 +21,22 @@ def searchMark():
 
 
 def AllMark():
-    print('待完成')
+    rs =Data.readFile('publishhousework')
+    for i in rs :
+        rs2 = Data.readFile('第' + i[0] + '次作业')
+        print('第' + i[0] + '次作业')
+        print(rs2)
 
 def OnceMark():
     MarkNum = input('请输出所需查询的作业号')
-    rs = Data.readFile(MarkNum)
+    rs = Data.readFile('第' + str(MarkNum) + '次作业')
     print(rs)
 
 def NoMark():
     MarkNum = input('请输出所需查询的作业号')
-    rs = Data.readFile(MarkNum)
+    rs = Data.readFile('第' + str(MarkNum) + '次作业')
     for i in rs:
-        if i[1] == 0:
-            print(i[2] + '\n')
+        if i[1] == '0':
+            print(i[0] + '\n')
 
 

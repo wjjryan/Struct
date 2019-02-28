@@ -24,14 +24,20 @@ def PublishedHousework():
         print(i[0] + '   ' + i[1] + '\n')
 
 def PubulishHousework():
+    date = 1
+    key = input('是否第一次发布作业')
+    if key == '1':
+        rs = Data.readFilewhilenull('publishhousework')
+    else:
+        rs = Data.readFile('publishhousework')
+        for i in rs:
+            date = int(i[0])
+        date += 1
     content = input('请输入你的作业内容')
-    rs = Data.readFile('publishhousework')
-    for i in rs:
-        date = i[0]
-    date += 1
-    Data.addItem('publishhousework', date)
+    Data.addItem('publishhousework', str(date))
     Data.addItem('publishhousework', content)
-    for i in 20:
-        Data.addItem(date, i)
-        Data.addItem(date, 0)
-        Data.addItem(date, '\n')
+    Data.addItem('publishhousework', '\n')
+    for i in range(20):
+        Data.addItem('第'+str(date)+'次作业', '学号'+str(i))
+        Data.addItem('第'+str(date)+'次作业', str(0))
+        Data.addItem('第'+str(date)+'次作业', '\n')

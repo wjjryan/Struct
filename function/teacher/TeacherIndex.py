@@ -5,7 +5,7 @@ def teacherLogin():
         print('2.登录')
         choose = input()
         if choose == '1':
-            TeacherRegister.teacherLogin()
+            TeacherRegister.teacherRegister()
             break
         elif choose == '2':
             TeacherLogin.TeacherLogin()

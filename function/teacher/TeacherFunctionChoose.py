@@ -7,15 +7,15 @@ def teacherFunctionChoose():
         print('1.查看已发布的作业或创建新作业')
         print('2.录入成绩或更改成绩')
         print('3.查看成绩')
+        print('0.返回')
         choose = input()
         if choose == '1':
             CheckHousework.checkHousework()
-            break
         elif choose == '2':
             InputAndCorrectMark.inputAndCorrectMark()
-            break
         elif choose == '3':
             SearchMark.searchMark()
+        elif choose == '0':
             break
         else:
             print('输出错误请重新选择')

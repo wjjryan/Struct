@@ -3,8 +3,12 @@ from Data import Data
 
 def TeacherLogin():
     while True:
+        key = 0
         account  = input('请输入你的工号')
         password = input('请输入你的密码')
+        k = print('输入0返回')
+        if k == '0':
+            break
         re = Data.readFile('TeacherInformation')
         for i in re:
             print(i[1])
