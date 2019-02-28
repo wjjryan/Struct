@@ -22,14 +22,18 @@ def InputOrCorrectMark():
         rs = Data.readFile('第' + str(MarkNum) + '次作业')
         print('该次作业所有同学的成绩'+'\n')
         print(rs)
-        student = input('请输入所需要录入成绩学生的学号')
-        Mark    = input('请输入成绩')
-        oncemark = ['学号'+str(student), Mark]
-        for i in rs:
-            if i[0] == oncemark[0]:
-                i[1] = oncemark[1]
-        Data.rewriteFile('第'+str(MarkNum)+'次作业',rs)
-        key = input('是否继续输入成绩(1继续，0退出)')
+        while True:
+            student = input('请输入所需要录入成绩学生的学号')
+            Mark    = input('请输入成绩')
+            oncemark = ['学号'+str(student), Mark]
+            for i in rs:
+                if i[0] == oncemark[0]:
+                    i[1] = oncemark[1]
+            Data.rewriteFile('第'+str(MarkNum)+'次作业', rs)
+            key = input('是否继续输入成绩(1继续，0返回)')
+            if key == '0':
+                break
+        key = input('是否继续输入其他作业号的成绩(1继续，0返回)')
         if key == '0':
             break
 """def CorrectMark():
